@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner in = new Scanner(System.in);
-
+    static final double scale = Math.pow(10,3);
     public static int Factorial(int number) { // функция нахождения факториала
         int result = 1; // начинаем с единицы так как 0 * 1 будет ноль и мы получим некоректное число
         for (int i = 1; i <= number; i++) { // пока не будет равно поадному числу
@@ -35,7 +35,7 @@ public class Main {
                 continue;
             W += (Math.pow(-1, i) * factorial) / (i - 4);
         }
-        System.out.println("Значение W: " + W);
+        System.out.println("Значение W: " + Math.ceil(W * scale) / scale);
     }
     public static void main(String[] args) {
         Base();
